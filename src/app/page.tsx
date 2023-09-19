@@ -1,13 +1,16 @@
 import Image from 'next/image'
+import Link from 'next/link';
+import { useDemoFeatureServer } from '../lib/featureFlags';
 import styles from './page.module.css'
 
-export default function Home() {
+export default async function Home() {
+  const featureFlag = await useDemoFeatureServer();
+
   return (
     <main className={styles.main}>
       <div className={styles.description}>
         <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
+          The DemoFeature was requested and is {featureFlag ? 'enabled' : 'disabled'}
         </p>
         <div>
           <a
@@ -38,6 +41,23 @@ export default function Home() {
           priority
         />
       </div>
+
+      <Link
+        href="/dashboard"
+        className={styles.card}
+      >
+        <h2>
+          List of all feature flags <span>-&gt;</span>
+        </h2>
+      </Link>
+      <Link
+        href="/context"
+        className={styles.card}
+      >
+        <h2>
+          Feature flags as context <span>-&gt;</span>
+        </h2>
+      </Link>
 
       <div className={styles.grid}>
         <a

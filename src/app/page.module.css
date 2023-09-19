@@ -107,6 +107,29 @@
 .logo {
   position: relative;
 }
+
+.errorButton {
+  background-color: #ececec;
+  border-radius: 5px;
+  border: 1px solid rgba(var(--card-border-rgb), 1);
+  cursor: pointer;
+  font-size: 15px;
+  margin: 35px auto;
+  min-width: 100px;
+  padding: 5px;
+}
+
+.errorCentered {
+  align-items: center;
+  background: rgba(var(--card-rgb), 0.3);
+  border-radius: var(--border-radius);
+  border: 1px solid rgba(var(--card-border-rgb), 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 1.2rem;
+}
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {

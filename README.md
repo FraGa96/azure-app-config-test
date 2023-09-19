@@ -1,3 +1,9 @@
+# Example for feature flags from azure app config
+Ensure you have an .env or .env.local to run without errors
+| Key                     | Description                          | Example                    |
+|-------------------------|--------------------------------------|----------------------------|
+| AZURE_CONFIG_ACCESS_KEY | Read only azure app conection string | 'Endpoint=#;Id=#;Secret=#' |
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
